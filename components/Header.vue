@@ -1,7 +1,10 @@
 <template>
-    <nav>
-        <h2>Header</h2>
-    </nav>
+    <div class="header">
+        <h2>Logo</h2>
+        <nav>
+            <h2>Nav</h2>
+        </nav>
+    </div>
 </template>
 
 <script>
@@ -11,8 +14,9 @@
 </script>
 
 <style scoped>
-    .container {
-        width: 50px;
+    .header {
+        display: flex;
+        justify-content: space-between;
     }
 </style>
 
