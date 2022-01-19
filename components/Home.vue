@@ -26,9 +26,8 @@ export default {
   flex-direction: column;
   align-items: center;
   background-image: url('@/assets/home/background-home-mobile.jpg');
+  justify-content: space-between;
   background-repeat: no-repeat;
-
-  /* background-size: contain; */
   height: 667px;
   width: 100%;
 }
@@ -43,7 +42,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 112px 24px;
+  margin: 112px 24px 0;
 }
 
 .span {
@@ -76,7 +75,8 @@ export default {
 }
 
 .btn-main {
-  margin-top: 50px;
+  margin: 0;
+  margin-bottom: 48px;
   width: 150px;
   height: 150px;
   font-size: 20px;
@@ -93,7 +93,8 @@ export default {
   }
 
   .overview {
-    margin: 202px 159px;
+    margin: 202px 24px 0;
+    width: 450px;
   }
 
   .title {
@@ -112,7 +113,8 @@ export default {
   }
 
   .btn-main {
-    margin-top: 156px;
+    margin: 0;
+    margin-bottom: 90px;
     width: 246px;
     height: 246px;
     font-size: 32px;
@@ -125,16 +127,17 @@ export default {
     background-image: url('@/assets/home/background-home-desktop.jpg');
     height: 900px;
     max-width: 1440px;
-    flex-direction: row;
     align-items: flex-end;
+    flex-flow: wrap row;
     justify-content: space-between;
+    gap: 100px;
   }
 
   .overview {
     margin: 0;
     width: 450px;
-    margin-left: 131px;
-    margin-bottom: 165px;
+    margin-left: 9%;
+    margin-bottom: 9%;
   }
 
   .title {
@@ -153,9 +156,8 @@ export default {
   }
 
   .btn-main {
-    margin: 0;
-    margin-right: 131px;
-    margin-bottom: 165px;
+    margin-right: 9%;
+    margin-bottom: 9%;
     width: 246px;
     height: 246px;
     font-size: 32px;
