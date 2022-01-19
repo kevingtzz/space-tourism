@@ -1,6 +1,6 @@
 <template>
-  <div class="header">
-    <nuxt-link to="home">
+  <header>
+    <nuxt-link id="logo-wrapper" to="home">
       <img id="logo" src="shared/logo.svg" alt="Logo" />
     </nuxt-link>
     <nav :class="navToggle">
@@ -16,10 +16,10 @@
         </li>
       </ul>
     </nav>
-    <span id="menu-icon" @click="openNav">
-      <img src="shared/icon-hamburger.svg" alt="menu-icon" />
+    <span id="menu-icon-wrapper" @click="openNav">
+      <img id="menu-icon" src="shared/icon-hamburger.svg" alt="menu-icon" />
     </span>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -50,17 +50,22 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  display: flex;
-  justify-content: space-between;
+header {
   position: fixed;
+  justify-content: space-between;
+  display: flex;
   width: 100%;
 }
 
-#logo {
+#logo-wrapper {
   height: 40px;
-  padding: 24px;
   width: 40px;
+  margin: 24px;
+}
+
+#logo {
+  height: 100%;
+  width: 100%;
 }
 
 nav {
@@ -126,10 +131,23 @@ nav {
   text-decoration: none;
 }
 
-#menu-icon {
+.menu-link b {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+}
+
+.menu-link span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+}
+
+#menu-icon-wrapper {
   height: 21px;
-  padding: 24px;
-  padding-top: 33px;
   width: 24px;
+  margin: 33px 24px;
 }
 </style>

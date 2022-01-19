@@ -25,7 +25,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('@/static/assets/home/background-home-mobile.jpg');
+  background-image: url('@/assets/home/background-home-mobile.jpg');
   background-repeat: no-repeat;
 
   /* background-size: contain; */
@@ -47,10 +47,14 @@ export default {
 }
 
 .span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  margin: 0 24px;
+  text-align: center;
   letter-spacing: 2.7px;
+  color: var(--light-blue);
 }
 
 .paragraph {
@@ -84,7 +88,7 @@ export default {
 
 @media (min-width: 376px) {
   .home {
-    background-image: url('@/static/assets/home/background-home-tablet.jpg');
+    background-image: url('@/assets/home/background-home-tablet.jpg');
     height: 1024px;
   }
 
@@ -118,7 +122,7 @@ export default {
 
 @media (min-width: 769px) {
   .home {
-    background-image: url('@/static/assets/home/background-home-desktop.jpg');
+    background-image: url('@/assets/home/background-home-desktop.jpg');
     height: 900px;
     max-width: 1440px;
     flex-direction: row;
