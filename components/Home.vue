@@ -35,14 +35,14 @@ export default {
 .title {
   font-size: 80px;
   line-height: 100px;
-  margin: 16px 24px;
+  margin: 16px 0;
 }
 
 .overview {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 112px 24px 0;
+  margin: 112px 22px 0;
 }
 
 .span {
@@ -54,13 +54,14 @@ export default {
   text-align: center;
   letter-spacing: 2.7px;
   color: var(--light-blue);
+  margin: 0;
 }
 
 .paragraph {
   text-align: center;
   font-size: 15px;
   line-height: 25px;
-  margin: 0 24px;
+  margin: 0;
 }
 
 .btn {
@@ -130,7 +131,6 @@ export default {
     align-items: flex-end;
     flex-flow: wrap row;
     justify-content: space-between;
-    gap: 100px;
   }
 
   .overview {
@@ -138,6 +138,7 @@ export default {
     width: 450px;
     margin-left: 9%;
     margin-bottom: 9%;
+    align-items: flex-start;
   }
 
   .title {
@@ -148,16 +149,17 @@ export default {
   .span {
     font-size: 28px;
     line-height: 34px;
+    text-align: left;
   }
 
   .paragraph {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 32px;
+    text-align: left;
   }
 
   .btn-main {
-    margin-right: 9%;
-    margin-bottom: 9%;
+    margin: 0 9% 9%;
     width: 246px;
     height: 246px;
     font-size: 32px;
