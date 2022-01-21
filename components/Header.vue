@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nuxt-link id="logo-wrapper" to="home">
+    <nuxt-link id="header-logo-wrapper" to="home">
       <img id="logo" src="shared/logo.svg" alt="Logo" />
     </nuxt-link>
     <nav :class="navToggle">
@@ -51,13 +51,13 @@ export default {
 
 <style scoped>
 header {
-  position: fixed;
-  justify-content: space-between;
+  position: absolute;
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
 
-#logo-wrapper {
+#header-logo-wrapper {
   height: 40px;
   width: 40px;
   margin: 24px;
@@ -133,14 +133,14 @@ nav {
 
 .menu-link b {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 19px;
   letter-spacing: 2.7px;
 }
 
 .menu-link span {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 19px;
   letter-spacing: 2.7px;
 }
@@ -149,5 +149,51 @@ nav {
   height: 21px;
   width: 24px;
   margin: 33px 24px;
+}
+
+@media only screen and (min-width: 600px) {
+  #header-logo-wrapper {
+    height: 48px;
+    width: 48px;
+    margin: 24px 39px;
+  }
+
+  #menu-icon-wrapper {
+    display: none;
+  }
+
+  nav {
+    right: 0;
+    position: absolute;
+    width: 450px;
+    height: 96px;
+  }
+
+  #close-icon {
+    display: none;
+  }
+
+  #menu-list {
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .menu-link b {
+    display: none;
+  }
+
+  .menu-item {
+    width: auto;
+    height: 100%;
+    padding: 0;
+  }
+
+  .menu-link span {
+    font-size: 1.4rem;
+  }
 }
 </style>
