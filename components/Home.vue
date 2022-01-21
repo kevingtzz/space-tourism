@@ -28,7 +28,9 @@ export default {
   background-image: url('@/assets/home/background-home-mobile.jpg');
   justify-content: space-between;
   background-repeat: no-repeat;
-  height: 667px;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
   width: 100%;
 }
 
@@ -87,15 +89,14 @@ export default {
   box-shadow: 0 0 0 40px #aaa;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 600px) {
   .home {
     background-image: url('@/assets/home/background-home-tablet.jpg');
-    height: 1024px;
   }
 
   .overview {
-    margin: 202px 24px 0;
-    width: 450px;
+    margin: 27% 24px 0;
+    max-width: 450px;
   }
 
   .title {
@@ -115,19 +116,18 @@ export default {
 
   .btn-main {
     margin: 0;
-    margin-bottom: 90px;
-    width: 246px;
-    height: 246px;
+    margin-bottom: 9%;
+    width: 242px;
+    height: 242px;
     font-size: 32px;
     line-height: 37px;
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 980px) {
   .home {
+    max-width: 1920px;
     background-image: url('@/assets/home/background-home-desktop.jpg');
-    height: 900px;
-    max-width: 1440px;
     align-items: flex-end;
     flex-flow: wrap row;
     justify-content: space-between;
