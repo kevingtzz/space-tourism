@@ -3,6 +3,7 @@
     <nuxt-link id="header-logo-wrapper" to="home">
       <img id="logo" src="shared/logo.svg" alt="Logo" />
     </nuxt-link>
+    <div id="header-line"></div>
     <nav :class="navToggle">
       <span id="close-icon" @click="closeNav">
         <img src="shared/icon-close.svg" alt="close" />
@@ -194,6 +195,44 @@ nav {
 
   .menu-link span {
     font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  header {
+    min-width: 1445px;
+  }
+
+  #header-logo-wrapper {
+    margin: 55px;
+  }
+
+  #header-line {
+    position: absolute;
+    top: 80px;
+    left: 167px;
+    width: 473px;
+    height: 1px;
+    background: #fff;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    z-index: 10;
+  }
+
+  nav {
+    top: 35px;
+    right: 0;
+    position: absolute;
+    width: 830px;
+    height: 85px;
+  }
+
+  .menu-link b {
+    display: inline-block;
+  }
+
+  .menu-link span {
+    font-size: 1.6rem;
   }
 }
 </style>
