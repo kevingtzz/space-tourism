@@ -83,6 +83,7 @@ export default {
   width: 150px;
   height: 150px;
   font-size: 20px;
+  transition: box-shadow 0.6s;
 }
 
 .btn-main:hover {
