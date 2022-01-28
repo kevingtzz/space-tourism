@@ -3,6 +3,7 @@
     <nuxt-link id="header-logo-wrapper" to="home">
       <img id="logo" src="shared/logo.svg" alt="Logo" />
     </nuxt-link>
+    <div id="header-line"></div>
     <nav :class="navToggle">
       <div id="header-line"></div>
       <span id="close-icon" @click="closeNav">
