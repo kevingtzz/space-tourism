@@ -5,6 +5,7 @@
     </nuxt-link>
     <div id="header-line"></div>
     <nav :class="navToggle">
+      <div id="header-line"></div>
       <span id="close-icon" @click="closeNav">
         <img src="shared/icon-close.svg" alt="close" />
       </span>
@@ -209,8 +210,8 @@ nav {
 
   #header-line {
     position: absolute;
-    top: 80px;
-    left: 167px;
+    top: 43px;
+    left: -450px;
     width: 473px;
     height: 1px;
     background: #fff;
@@ -222,7 +223,7 @@ nav {
   nav {
     top: 35px;
     right: 0;
-    position: absolute;
+    position: relative;
     width: 830px;
     height: 85px;
   }
