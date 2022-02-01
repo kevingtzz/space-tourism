@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nuxt-link id="header-logo-wrapper" to="home">
+    <nuxt-link id="header-logo-wrapper" to="/">
       <img id="logo" src="shared/logo.svg" alt="Logo" />
     </nuxt-link>
     <div id="header-line"></div>
@@ -10,10 +10,10 @@
         <img src="shared/icon-close.svg" alt="close" />
       </span>
       <ul id="menu-list">
-        <li v-for="path in paths" :key="path.id" class="menu-item">
-          <nuxt-link class="menu-link" :to="path.name">
-            <b>{{ path.id }}</b>
-            <span>{{ path.name.toUpperCase() }}</span>
+        <li v-for="page in pages" :key="page.id" class="menu-item">
+          <nuxt-link class="menu-link" :to="page.path">
+            <b>{{ page.id }}</b>
+            <span>{{ page.label.toUpperCase() }}</span>
           </nuxt-link>
         </li>
       </ul>
@@ -30,11 +30,11 @@ export default {
 
   data() {
     return {
-      paths: [
-        { name: 'home', id: '00' },
-        { name: 'destination', id: '01' },
-        { name: 'crew', id: '02' },
-        { name: 'technology', id: '03' },
+      pages: [
+        { label: 'home', id: '00', path: '/' },
+        { label: 'destination', id: '01', path: '/destination' },
+        { label: 'crew', id: '02', path: '/crew' },
+        { label: 'technology', id: '03', path: '/technology' },
       ],
       navToggle: null,
     }
